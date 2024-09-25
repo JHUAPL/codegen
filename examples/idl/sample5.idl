@@ -1,0 +1,43 @@
+// sample5.idl
+
+#ifndef SAMPLE5_IDL
+#define SAMPLE5_IDL
+
+module outer {
+
+   struct Type1 {
+      double x;
+   };
+   struct Type2 {
+      double y;
+      Type1 t;
+   };
+   struct Type3 {
+      double z;
+   };
+
+   union Variant1 switch(long) {
+      case 1: Type1 t1;
+      case 2: Type2 t2;
+      case 3: Type3 t3;
+      case 4: double t4;
+   };
+
+   module inner {
+      enum Switcher {
+         ONE, TWO
+      };
+   };
+
+   union Variant2 switch(inner::Switcher) {
+      case ONE: Type1 t1;
+      case TWO: Type2 t2;
+   };
+
+   struct Message1 {
+      Variant1 v1;
+      Variant2 v2;
+   };
+};
+
+#endif /* SAMPLE5_IDL */

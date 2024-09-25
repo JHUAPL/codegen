@@ -1,0 +1,25 @@
+// test_five.idl
+
+#ifndef test_five_IDL_DEFINED
+#define test_five_IDL_DEFINED
+
+struct Vector3 {
+    double x[3];
+};
+
+struct Time {
+    uint64 sec;
+    uint32 nsec;
+};
+
+struct Matrix3 {
+    double y[3][3];
+};
+
+struct BiggerMatrix3 {
+    Vector3 z[3][3];
+    Time q;
+};
+
+
+#endif /* test_five_IDL_DEFINED */

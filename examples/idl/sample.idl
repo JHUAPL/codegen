@@ -1,0 +1,73 @@
+#ifndef SAMPLE_IDL
+#define SAMPLE_IDL
+
+#include "sub/sample2.idl"
+
+// hello
+module tester {
+
+   module inner {
+      enum Sample1Enum {
+         A = 0,
+         B
+      };
+      enum PrimitiveEnum {
+         ENUM1,
+         ENUM2,
+         ENUM3
+      };
+
+      enum PrimitiveEnum2 {
+         ENUM1 = 10,
+         ENUM2 = 20,
+         ENUM3 = 30
+      };
+
+      const short SIZE = 5;
+      const long NEGATIVE = -50;
+
+      typedef short TypedefShort;
+      typedef short ShortArray[2];
+
+      struct Sample1Struct {
+
+         tester::Sample2Struct s2s;
+
+         char char_member;
+         wchar wchar_member;
+         octet octet_member;
+         short short_member;
+         unsigned short unsigned_short_member;
+         long long_member;
+         unsigned long unsigned_long_member;
+         long long long_long_member;
+         unsigned long long unsigned_long_long_member;
+         float float_member;
+         double double_member;
+         long double long_double_member;
+         boolean boolean_member;
+         PrimitiveEnum e1;
+         PrimitiveEnum2 e2;
+
+         short short_array[2];
+         short two_d_short_array[1][2];
+
+         sequence<short,4> short_sequence;
+         sequence<short> short_sequence;
+
+         sequence<short,4> sequences_array[2];
+         sequence<ShortArray,2>   arrays_sequence;
+
+         string<20> fixed_string_member;
+         string string_member;
+         wstring<20> fixed_wstring_member;
+         wstring wstring_member;
+
+      };
+   };
+};
+#include "sample4.idl"
+struct AnotherOne {
+   double x;
+};
+#endif

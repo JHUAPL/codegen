@@ -1,0 +1,26 @@
+// test_six.idl
+
+#ifndef test_six_IDL_DEFINED
+#define test_six_IDL_DEFINED
+
+module module1 {
+  module module2 {
+    module module3 {
+      enum enum1 {
+        A = 1,
+        B = 2
+      };
+      enum enum2 {
+        A,
+        B,
+        C
+      };
+      enum enum3 {
+        A = 1,
+        B
+      };
+    };
+  };
+};
+
+#endif /* test_six_IDL_DEFINED */

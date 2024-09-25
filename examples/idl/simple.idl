@@ -1,0 +1,125 @@
+#ifndef SIMPLE_IDL
+#define SIMPLE_IDL
+
+
+struct Sample4Struct {
+   double x;
+   double y[4];
+   double z[9][8][7];
+   @optional double w[14];
+};
+
+const short SIZES1 = 5;
+const unsigned short SIZES2 = 25;
+const long long SIZES3 = 15;
+
+typedef short TypedefShorter;
+
+const string STR = "something";
+
+union Date switch (short) {
+   case 1: string opt1;
+   case 2: long opt2;
+   default: long opt3;
+};
+
+enum SampleTypeEnum
+{
+   LONG_TYPE,
+   DOUBLE_TYPE,
+   BOOL_TYPE
+};
+
+union SampleTypeUnion switch(SampleTypeEnum)
+{
+   case LONG_TYPE:    long longType;
+   case DOUBLE_TYPE:  double doubleType;
+   case BOOL_TYPE:    boolean boolType;
+};
+
+module one_module {
+   struct OneStruct {
+      double zz;
+   };
+};
+
+enum TopEnum {A, B};
+module two_module {
+   struct TwoStruct {
+      @optional
+      double zz;
+   };
+};
+
+module outer_module {
+
+   struct Sample3Struct {
+      @optional double x;
+   };
+
+   struct Sample2Struct {
+      double x;
+   };
+
+   module inner_module {
+      enum Sample1Enum {
+         A = 10,
+         B = 20
+      };
+
+      const short SIZE = 5;
+      const long NEGATIVE = -50;
+      const double FLOAT = 15.0;
+
+      typedef short TypedefShort;
+      typedef short ShortArray[2];
+
+      struct Sample1Struct {
+
+         char char_member;
+         wchar wchar_member;
+         octet octet_member;
+         short short_member;
+         unsigned short unsigned_short_member;
+         long long_member;
+         unsigned long unsigned_long_member;
+         long long long_long_member;
+         unsigned long long unsigned_long_long_member;
+         float float_member;
+         double double_member;
+         long double long_double_member;
+         boolean boolean_member;
+         TopEnum e1;
+         Sample1Enum e2;
+         one_module::OneStruct one;
+
+         short short_array[2];
+         short two_d_short_array[1][2];
+
+         int8 int8_member;
+         int16 int16_member;
+         int32 int32_member;
+         int64 int64_member;
+
+         uint8 uint8_member;
+         uint16 uint16_member;
+         uint32 uint32_member;
+         uint64 uint64_member;
+
+         sequence<short,4> short_sequence;
+         sequence<short> short_sequence;
+
+         sequence<short,4> sequences_array[2];
+         sequence<ShortArray,2>   arrays_sequence;
+
+         string string_member;
+         wstring wstring_member;
+
+         one_module::OneStruct oneStruct;
+         Sample1Enum en;
+
+         Date date;
+      };
+   };
+};
+#endif

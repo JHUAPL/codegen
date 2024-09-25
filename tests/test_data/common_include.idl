@@ -1,0 +1,10 @@
+// common_include.idl
+
+#ifndef common_include_IDL_DEFINED
+#define common_include_IDL_DEFINED
+
+struct CommonType {
+    char x;
+};
+
+#endif /* common_include_IDL_DEFINED */

@@ -1,0 +1,26 @@
+#ifndef SAMPLE4_IDL
+#define SAMPLE4_IDL
+
+#include "sample.idl"
+
+module tester4 {
+
+   enum Sample4Enum {
+      A = 1,
+      B
+   };
+   const short DIM = 10;
+
+   typedef short myshort;
+   struct Sample4Struct {
+      double x;
+      long y;
+      boolean flag;
+      Sample4Enum en;
+      sequence<short> shorts;
+      double arr[19];
+      float arrr[DIM];
+      myshort f;
+   };
+};
+#endif

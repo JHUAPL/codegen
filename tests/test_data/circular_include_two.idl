@@ -1,0 +1,8 @@
+// circular_include_two.idl
+
+#ifndef circular_include_two_IDL_DEFINED
+#define circular_include_two_IDL_DEFINED
+
+#include "circular_include_one.idl"
+
+#endif /* circular_include_two_IDL_DEFINED */

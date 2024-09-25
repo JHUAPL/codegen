@@ -1,0 +1,27 @@
+// test_fourteen.idl
+
+#ifndef test_fourteen_IDL_DEFINED
+#define test_fourteen_IDL_DEFINED
+
+module perception_msgs {
+  const uint16 RANGE_BINS = 512;
+  const uint16 SCANS_PER_WEDGE = 32;
+  struct ScanLine {
+        int32 line[perception_msgs::RANGE_BINS];
+  };
+
+  struct RadarScanLineWedge {
+        sequence<int32,perception_msgs::SCANS_PER_WEDGE> scans;
+  };
+
+  struct AnotherTest {
+        int32 scans[perception_msgs::SCANS_PER_WEDGE];
+  };
+
+  struct AnotherTest2 {
+        int32 scans[perception_msgs::SCANS_PER_WEDGE][4];
+  };
+
+};
+
+#endif /* test_fourteen_IDL_DEFINED */

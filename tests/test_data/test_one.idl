@@ -1,0 +1,28 @@
+// test_one.idl
+
+#ifndef test_one_IDL_DEFINED
+#define test_one_IDL_DEFINED
+
+struct One {
+    char one;
+    @optional
+    string<255> two;
+    boolean three;
+    float four;
+   // @copy "Copy this!";
+};
+
+module test_one {
+  const double PI = 3.14;
+  module inner {
+    enum test_enum {
+      A = 1
+    };
+    enum test_enum2 {
+      A = 1,
+      B = 2
+    };
+  };
+};
+
+#endif /* test_one_IDL_DEFINED */

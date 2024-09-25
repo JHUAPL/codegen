@@ -1,0 +1,26 @@
+#ifndef SAMPLE3_IDL
+#define SAMPLE3_IDL
+
+#include "sample.idl"
+
+module tester2 {
+
+   enum Sample3Enum {
+      A = 1,
+      B
+   };
+   const short DIM = 10;
+
+   typedef short myshort;
+   struct Sample3Struct {
+      double x;
+      long y;
+      boolean flag;
+      Sample3Enum en;
+      sequence<short> shorts;
+      double arr[19];
+      float arrr[DIM];
+      myshort f;
+   };
+};
+#endif

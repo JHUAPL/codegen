@@ -1,0 +1,14 @@
+// test_twelve.idl
+
+#ifndef test_twelve_IDL_DEFINED
+#define test_twelve_IDL_DEFINED
+
+#include "include_one.idl"
+#include "include_two.idl"
+
+struct Something {
+   Level2Type1 x;
+   Level2Type2 y;
+};
+
+#endif /* test_twelve_IDL_DEFINED */

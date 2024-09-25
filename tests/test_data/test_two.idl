@@ -1,0 +1,39 @@
+// test_two.idl
+
+#ifndef test_two_IDL_DEFINED
+#define test_two_IDL_DEFINED
+
+enum enum1 {
+  A = 1,
+  B = 2
+};
+enum enum2 {
+  A,
+  B,
+  C
+};
+enum enum3 {
+  A = 1,
+  B
+};
+enum enum4 {
+  A = 10,
+  B = 20
+};
+module test {
+  enum enum1 {
+    A = 1,
+    B = 2
+  };
+  enum enum2 {
+    A,
+    B,
+    C
+  };
+  enum enum3 {
+    A = 1,
+    B
+  };
+};
+
+#endif /* test_two_IDL_DEFINED */

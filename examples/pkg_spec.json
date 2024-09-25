@@ -1,0 +1,7 @@
+{
+    "pkg_name": "example_msgs",
+    "system_dependencies": [],
+    "project_dependencies": [
+    ],
+    "msg_dependencies": []
+}

@@ -1,0 +1,14 @@
+// SomeType.idl
+
+#ifndef SomeType_IDL_DEFINED
+#define SomeType_IDL_DEFINED
+
+module CodeGen {
+  struct SomeType {
+        double a;
+        char b;
+  };
+
+};
+
+#endif /* SomeType_IDL_DEFINED */

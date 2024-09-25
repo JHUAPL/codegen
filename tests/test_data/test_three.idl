@@ -1,0 +1,150 @@
+// test_three.idl
+
+#ifndef test_three_IDL_DEFINED
+#define test_three_IDL_DEFINED
+
+struct s1 {
+   boolean a;
+   octet b;
+   char c;
+   wchar d;
+   int16 e;
+   uint16 f;
+   int32 g;
+   uint32 h;
+   int64 i;
+   uint64 j;
+   float k;
+   double l;
+   char m;
+   wchar n;
+   octet o;
+   short p;
+   unsigned short q;
+   long r;
+   unsigned long s;
+   long long t;
+   unsigned long long u;
+   float v;
+   double w;
+   long double x;
+   string<255> y;
+   wstring<255> z;
+};
+
+struct s2 {
+   @optional
+   boolean a;
+   @optional
+   octet b;
+   @optional
+   char c;
+   @optional
+   wchar d;
+   @optional
+   int16 e;
+   @optional
+   uint16 f;
+   @optional
+   int32 g;
+   @optional
+   uint32 h;
+   @optional
+   int64 i;
+   @optional
+   uint64 j;
+   @optional
+   float k;
+   @optional
+   double l;
+   @optional
+   char m;
+   @optional
+   wchar n;
+   @optional
+   octet o;
+   @optional
+   short p;
+   @optional
+   unsigned short q;
+   @optional
+   long r;
+   @optional
+   unsigned long s;
+   @optional
+   long long t;
+   @optional
+   unsigned long long u;
+   @optional
+   float v;
+   @optional
+   double w;
+   @optional
+   long double x;
+   @optional
+   string<255> y;
+   @optional
+   wstring<255> z;
+};
+
+struct s3 {
+   boolean a;
+   octet b;
+   char c;
+   wchar d;
+   int16 e;
+   uint16 f;
+   int32 g;
+   uint32 h;
+   int64 i;
+   uint64 j;
+   float k;
+   double l;
+   char m;
+   wchar n;
+   octet o;
+   short p;
+   unsigned short q;
+   long r;
+   unsigned long s;
+   long long t;
+   unsigned long long u;
+   float v;
+   double w;
+   long double x;
+   string<255> y;
+   wstring<255> z;
+};
+
+struct s4 {
+   @optional
+   s1 a;
+   s2 b;
+};
+
+const boolean aa = FALSE;
+const int16 ee = 1;
+const uint16 ff = 1;
+const int32 gg = 1;
+const uint32 hh = 1;
+const int64 ii = 1;
+const uint64 jj = 1;
+const float kk = 1.0;
+const double ll = 1.0;
+const short pp = 1;
+const unsigned short qq = 1;
+const long rr = 1;
+const unsigned long ss = 1;
+const long long tt = 1;
+const unsigned long long uu = 1;
+const float vv = 1.0;
+const double ww = 1.0;
+const long double xx = 1.0;
+const string yy = "aa";
+const wstring zz = "bb";
+const float sciF = 1e0;
+const double sciD = 1e0;
+const long double sciLD = 1e0;
+const boolean aaa = TRUE;
+
+#endif /* test_three_IDL_DEFINED */

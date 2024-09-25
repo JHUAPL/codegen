@@ -1,0 +1,12 @@
+// include_two.idl
+
+#ifndef include_two_IDL_DEFINED
+#define include_two_IDL_DEFINED
+
+#include "common_include.idl"
+struct Level2Type2 {
+    CommonType y;
+};
+
+
+#endif /* include_two_IDL_DEFINED */

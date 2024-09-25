@@ -1,0 +1,8 @@
+// test_seven.idl
+
+#ifndef test_seven_IDL_DEFINED
+#define test_seven_IDL_DEFINED
+
+#include "test_eight.idl"
+
+#endif /* test_seven_IDL_DEFINED */

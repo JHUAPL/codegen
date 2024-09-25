@@ -1,0 +1,14 @@
+#ifndef SAMPLE2_IDL
+#define SAMPLE2_IDL
+
+#include "sample3.idl"
+
+module tester {
+   enum Sample2Enum { A, B };
+   struct Sample2Struct {
+      double x;
+      Sample2Enum e;
+      tester2::Sample3Struct str;
+   };
+};
+#endif

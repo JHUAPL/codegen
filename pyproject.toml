@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm[toml]"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+local_scheme = "no-local-version"
+version_scheme = "no-guess-dev"
+
+[project]
+name = "CodeGen"
+dynamic = ["version"]
+dependencies = [
+    "Mako == 1.1.6",
+    "pathlib == 1.0.1",
+    "inflection == 0.5.1",
+    "graphlib-backport==1.0.3",
+    "antlr4-python3-runtime == 4.9.1",
+    "importlib-metadata; python_version<'3.8'",
+]

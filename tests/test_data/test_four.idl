@@ -1,0 +1,11 @@
+// test_four.idl
+
+#ifndef test_four_IDL_DEFINED
+#define test_four_IDL_DEFINED
+
+#include "test_one.idl"
+#include "test_two.idl"
+#include "test_three.idl"
+const double PI = 3.14;
+
+#endif /* test_four_IDL_DEFINED */
